@@ -123,14 +123,14 @@ export default function ChallengesSection() {
         </div>
 
         {/* Photo */}
-        <div className="relative w-full h-52 md:h-64 rounded-3xl overflow-hidden mb-12">
+        <div className="relative w-full h-[360px] md:h-[480px] rounded-3xl overflow-hidden mb-12">
           <img
-            src="/vietnam/thach-thuc.jpg"
+            src="/vietnam/thach-thuc-o-nhiem.jpg"
             alt="Thách thức phát triển Việt Nam"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          <p className="absolute bottom-4 left-5 text-white/90 text-sm font-medium">Việt Nam — Đối mặt thách thức để vươn xa hơn</p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <p className="absolute bottom-5 left-6 text-white text-base font-semibold">Việt Nam — Đối mặt thách thức để vươn xa hơn</p>
         </div>
 
         {/* Divider */}

@@ -143,14 +143,14 @@ export default function InternationalIntegrationSection() {
         </div>
 
         {/* Photo */}
-        <div className="relative w-full h-52 md:h-64 rounded-3xl overflow-hidden mb-12">
+        <div className="relative w-full h-[360px] md:h-[480px] rounded-3xl overflow-hidden mb-12">
           <img
-            src="/vietnam/hoi-nhap.jpg"
+            src="/vietnam/hoi-nhap-quoc-te.webp"
             alt="Hội nhập quốc tế Việt Nam"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          <p className="absolute bottom-4 left-5 text-white/90 text-sm font-medium">Việt Nam — Vươn ra thế giới</p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <p className="absolute bottom-5 left-6 text-white text-base font-semibold">Việt Nam — Vươn ra thế giới</p>
         </div>
 
         {/* Export Growth Chart */}
