@@ -142,6 +142,17 @@ export default function InternationalIntegrationSection() {
           </div>
         </div>
 
+        {/* Photo */}
+        <div className="relative w-full h-52 md:h-64 rounded-3xl overflow-hidden mb-12">
+          <img
+            src="/vietnam/hoi-nhap.jpg"
+            alt="Hội nhập quốc tế Việt Nam"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          <p className="absolute bottom-4 left-5 text-white/90 text-sm font-medium">Việt Nam — Vươn ra thế giới</p>
+        </div>
+
         {/* Export Growth Chart */}
         <div className="bg-[#1a1a1a] rounded-3xl p-6 md:p-10 mb-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">

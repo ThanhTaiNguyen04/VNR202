@@ -21,7 +21,17 @@ const getBarHeight = (value: number) => {
 
 export default function EconomicGrowthSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const [sliderPos, setSliderPos] = useState(50)
+  const isDragging = useRef(false)
+  const compareRef = useRef<HTMLDivElement>(null)
   const sectionRef = useRef<HTMLElement>(null)
+
+  const handleMove = (clientX: number) => {
+    if (!isDragging.current || !compareRef.current) return
+    const rect = compareRef.current.getBoundingClientRect()
+    const pos = Math.min(97, Math.max(3, ((clientX - rect.left) / rect.width) * 100))
+    setSliderPos(pos)
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -113,6 +123,65 @@ export default function EconomicGrowthSection() {
                 Từ cuối thập niên 1980, Việt Nam chỉ là một nền kinh tế nhỏ. Sau quá trình Đổi mới, quy mô kinh tế 
                 tăng trưởng nhanh và liên tục, trở thành một trong những nền kinh tế tăng trưởng nhanh nhất thế giới.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Before / After Comparison Slider */}
+        <div className="mt-12">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-[#1a1a1a] text-base font-semibold">Hành trình chuyển mình</h3>
+            <span className="text-[#6a6a6a] text-xs">← Kéo để so sánh →</span>
+          </div>
+          <div
+            ref={compareRef}
+            className="relative w-full h-[360px] md:h-[500px] rounded-3xl overflow-hidden cursor-col-resize select-none"
+            onMouseDown={() => { isDragging.current = true }}
+            onMouseUp={() => { isDragging.current = false }}
+            onMouseLeave={() => { isDragging.current = false }}
+            onMouseMove={(e) => handleMove(e.clientX)}
+            onTouchStart={() => { isDragging.current = true }}
+            onTouchEnd={() => { isDragging.current = false }}
+            onTouchMove={(e) => handleMove(e.touches[0].clientX)}
+          >
+            {/* Ảnh hiện đại (nền) */}
+            <img
+              src="/vietnam/kinh-te-nay.webp"
+              alt="Kinh tế Việt Nam hiện đại"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+
+            {/* Ảnh xưa (clip từ trái) */}
+            <img
+              src="/vietnam/kinh-te-xua.jpg"
+              alt="Kinh tế Việt Nam xưa"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
+            />
+
+            {/* Đường kẻ + handle */}
+            <div
+              className="absolute top-0 bottom-0 w-[2px] bg-white shadow-[0_0_12px_rgba(0,0,0,0.4)]"
+              style={{ left: `${sliderPos}%` }}
+            >
+              <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center gap-0.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 18L9 12L15 6" stroke="#DA251D" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18L15 12L9 6" stroke="#DA251D" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+            {/* Label trái */}
+            <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/50 backdrop-blur-sm rounded-full">
+              <span className="text-white text-xs font-semibold">Trước Đổi Mới</span>
+            </div>
+
+            {/* Label phải */}
+            <div className="absolute top-4 right-4 px-3 py-1.5 bg-[#DA251D]/80 backdrop-blur-sm rounded-full">
+              <span className="text-white text-xs font-semibold">Việt Nam ngày nay</span>
             </div>
           </div>
         </div>

@@ -5,11 +5,22 @@ export default function QuoteSection() {
     <section className="w-full py-16 md:py-24 border-t border-b border-[rgba(185,28,28,0.08)] bg-gradient-to-b from-white to-[#FAFAF8]">
       <div className="max-w-[900px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center gap-8">
-          {/* Quote Icon */}
-          <div className="w-16 h-16 rounded-full bg-[#DA251D]/5 flex items-center justify-center">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" className="text-[#DA251D]">
-              <path d="M3 21C5.2 21 7 19.2 7 17V10C7 7.8 5.2 6 3 6M3 21V17M3 21H7V17M3 6V10M3 6H7V10M3 10H7M13 21C15.2 21 17 19.2 17 17V10C17 7.8 15.2 6 13 6M13 21V17M13 21H17V17M13 6V10M13 6H17V10M13 10H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+
+          {/* Portrait */}
+          <div className="relative">
+            <div className="w-28 h-28 rounded-full overflow-hidden ring-4 ring-[#DA251D]/25 ring-offset-4 shadow-2xl">
+              <img
+                src="/vietnam/nguyen-phu-trong.jpg"
+                alt="Tổng Bí thư Nguyễn Phú Trọng"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            {/* Quote badge */}
+            <div className="absolute -bottom-1 -right-1 w-9 h-9 rounded-full bg-[#DA251D] flex items-center justify-center shadow-lg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M3 21C5.2 21 7 19.2 7 17V10C7 7.8 5.2 6 3 6M3 21V17M3 21H7V17M3 6V10M3 6H7V10M3 10H7M13 21C15.2 21 17 19.2 17 17V10C17 7.8 15.2 6 13 6M13 21V17M13 21H17V17M13 6V10M13 6H17V10M13 10H17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
           </div>
 
           {/* Quote Text */}

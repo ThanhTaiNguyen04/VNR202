@@ -122,9 +122,19 @@ export default function ChallengesSection() {
           ))}
         </div>
 
+        {/* Photo */}
+        <div className="relative w-full h-52 md:h-64 rounded-3xl overflow-hidden mb-12">
+          <img
+            src="/vietnam/thach-thuc.jpg"
+            alt="Thách thức phát triển Việt Nam"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          <p className="absolute bottom-4 left-5 text-white/90 text-sm font-medium">Việt Nam — Đối mặt thách thức để vươn xa hơn</p>
+        </div>
+
         {/* Divider */}
         <div className="flex items-center gap-4 mb-16">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[rgba(0,0,0,0.1)]"></div>
           <div className="px-6 py-3 bg-[#22C55E]/5 rounded-full">
             <span className="text-[#22C55E] text-sm font-semibold">Hướng đi tương lai</span>
           </div>

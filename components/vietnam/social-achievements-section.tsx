@@ -163,6 +163,17 @@ export default function SocialAchievementsSection() {
           ))}
         </div>
 
+        {/* Photo */}
+        <div className="relative w-full h-52 md:h-64 rounded-3xl overflow-hidden my-12">
+          <img
+            src="/vietnam/xa-hoi.jpg"
+            alt="Thành tựu xã hội Việt Nam"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          <p className="absolute bottom-4 left-5 text-white/90 text-sm font-medium">Việt Nam — Cải thiện đời sống nhân dân</p>
+        </div>
+
         {/* Quality of Life Stats */}
         <div className="bg-[#1a1a1a] rounded-3xl p-8 md:p-12">
           <h3 className="text-white text-xl md:text-2xl font-semibold mb-8 text-center">Cải thiện chất lượng cuộc sống</h3>
