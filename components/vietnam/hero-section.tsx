@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -30,6 +31,7 @@ export default function HeroSection() {
             <a href="#xa-hoi" className="text-[#4a4a4a] hover:text-[#DA251D] text-sm font-medium transition-colors">Xã hội</a>
             <a href="#hoi-nhap" className="text-[#4a4a4a] hover:text-[#DA251D] text-sm font-medium transition-colors">Hội nhập</a>
             <a href="#thach-thuc" className="text-[#4a4a4a] hover:text-[#DA251D] text-sm font-medium transition-colors">Thách thức</a>
+            <Link href="/chien-luoc" className="px-4 py-2 bg-[#DA251D] text-white rounded-full text-sm font-medium hover:bg-red-700 transition-all shadow-md">Trò chơi 🎮</Link>
           </div>
         </div>
       </nav>
