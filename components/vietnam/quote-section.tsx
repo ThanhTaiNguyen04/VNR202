@@ -2,7 +2,7 @@
 
 export default function QuoteSection() {
   return (
-    <section className="w-full py-16 md:py-24 border-t border-b border-[rgba(185,28,28,0.08)] bg-gradient-to-b from-white to-[#FAFAF8]">
+    <section id="dat-nuoc-ta" className="w-full py-16 md:py-24 border-t border-b border-[rgba(185,28,28,0.08)] bg-gradient-to-b from-white to-[#FAFAF8]">
       <div className="max-w-[900px] mx-auto px-6 md:px-12">
         <div className="flex flex-col items-center gap-8">
 
