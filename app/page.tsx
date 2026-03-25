@@ -9,6 +9,7 @@ import SocialAchievementsSection from "@/components/vietnam/social-achievements-
 import InternationalIntegrationSection from "@/components/vietnam/international-integration-section"
 import ChallengesSection from "@/components/vietnam/challenges-section"
 import MemoryGameSection from "@/components/vietnam/memory-game-section"
+import AIUsageSection from "@/components/vietnam/ai-usage-section"
 import FooterSection from "@/components/vietnam/footer-section"
 
 export default function VietnamDevelopmentPage() {
@@ -30,6 +31,7 @@ export default function VietnamDevelopmentPage() {
           <SocialAchievementsSection />
           <InternationalIntegrationSection />
           <ChallengesSection />
+          <AIUsageSection />
           <MemoryGameSection />
           <FooterSection />
         </div>
